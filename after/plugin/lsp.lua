@@ -14,7 +14,7 @@ local capabilities = vim.tbl_deep_extend(
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {'lua_ls', 'rust_analyzer', 'gopls'},
+  ensure_installed = {'lua_ls', 'rust_analyzer', 'gopls', 'standardrb', 'jdtls'},
   handlers = {
     function(server_name)
       require('lspconfig')[server_name].setup({
@@ -34,8 +34,7 @@ require('mason-lspconfig').setup({
                             }
                         }
                     }
-                end,
-  },
+  end,
   ["gopls"] = function()
         local lspconfig = require("lspconfig")
         lspconfig.gopls.setup{
@@ -46,7 +45,7 @@ require('mason-lspconfig').setup({
             }
         }
   end,
-})
+}})
 
 vim.diagnostic.config({
     float = {
