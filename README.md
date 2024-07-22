@@ -1,4 +1,5 @@
-export PATH=$PATH:/usr/local/go/bin
+```
+export TERM=screen-256color
 
 cat ~/.tmux.conf
 
@@ -7,3 +8,4 @@ set-option -g focus-events on
 set-option -sa terminal-features ',XXX:RGB'
 set-option -ga terminal-overrides ',XXX:Tc'
 set -g default-terminal "${TERM}"
+```

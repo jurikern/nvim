@@ -25,6 +25,6 @@ return require('packer').startup(function(use)
   }
   use 'ray-x/go.nvim'
   use 'ray-x/guihua.lua'
-  use 'neovim/nvim-lspconfig'
   use 'folke/zen-mode.nvim'
+  use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release' }
 end)
